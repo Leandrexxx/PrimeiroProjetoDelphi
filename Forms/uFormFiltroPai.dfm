@@ -27,21 +27,35 @@ object formFiltroPai: TformFiltroPai
       Height = 13
       Caption = 'Label1'
     end
-    object Edit1: TEdit
+    object edtFiltro: TEdit
       Left = 14
       Top = 43
-      Width = 121
+      Width = 331
       Height = 21
       TabOrder = 0
-      Text = 'Edit1'
     end
-    object btnConsulta: TButton
-      Left = 224
+    object btnFiltro: TButton
+      Left = 360
       Top = 41
       Width = 75
       Height = 25
-      Caption = 'Consulta'
+      Caption = 'Filtrar'
       TabOrder = 1
     end
+  end
+  object fdQryFiltro: TFDQuery
+    Connection = dmDados.fdCon
+    Transaction = fdTransaction
+    Left = 464
+    Top = 144
+  end
+  object dsFiltro: TDataSource
+    Left = 448
+    Top = 224
+  end
+  object fdTransaction: TFDTransaction
+    Connection = dmDados.fdCon
+    Left = 528
+    Top = 184
   end
 end

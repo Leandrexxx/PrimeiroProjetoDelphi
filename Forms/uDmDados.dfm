@@ -1,8 +1,8 @@
 object dmDados: TdmDados
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 372
-  Width = 701
+  Height = 251
+  Width = 573
   object fdCon: TFDConnection
     Params.Strings = (
       
@@ -17,7 +17,7 @@ object dmDados: TdmDados
       'DriverID=FB')
     Connected = True
     LoginPrompt = False
-    Left = 216
-    Top = 104
+    Left = 264
+    Top = 88
   end
 end
