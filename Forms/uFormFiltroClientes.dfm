@@ -1,6 +1,8 @@
-inherited formFiltroPai1: TformFiltroPai1
+inherited formFiltroClientes: TformFiltroClientes
   Caption = 'Filtro de Clientes'
   ClientWidth = 1031
+  FormStyle = fsMDIChild
+  Visible = True
   WindowState = wsMaximized
   ExplicitWidth = 1047
   PixelsPerInch = 96
@@ -13,13 +15,82 @@ inherited formFiltroPai1: TformFiltroPai1
       Caption = 'Nome do Cliente'
       ExplicitWidth = 78
     end
+    object Label2: TLabel [1]
+      Left = 248
+      Top = 24
+      Width = 41
+      Height = 13
+      Caption = 'Fantasia'
+    end
+    object Label3: TLabel [2]
+      Left = 424
+      Top = 24
+      Width = 25
+      Height = 13
+      Caption = 'CNPJ'
+    end
+    object Label4: TLabel [3]
+      Left = 560
+      Top = 24
+      Width = 33
+      Height = 13
+      Caption = 'C'#243'digo'
+    end
     inherited edtFiltro: TEdit
-      Width = 323
-      ExplicitWidth = 323
+      Width = 219
+      ExplicitWidth = 219
     end
     inherited btnFiltro: TButton
-      Left = 352
-      ExplicitLeft = 352
+      Left = 696
+      OnClick = btnFiltroClick
+      ExplicitLeft = 696
+    end
+    inherited Panel2: TPanel
+      Left = 905
+      ExplicitLeft = 905
+      inherited Button1: TButton
+        Left = 34
+        ExplicitLeft = 34
+      end
+    end
+    object edtFantasia: TEdit
+      Left = 248
+      Top = 43
+      Width = 161
+      Height = 21
+      TabOrder = 3
+    end
+    object edtCnpj: TEdit
+      Left = 424
+      Top = 43
+      Width = 121
+      Height = 21
+      TabOrder = 4
+    end
+    object edtCodigo: TEdit
+      Left = 560
+      Top = 43
+      Width = 121
+      Height = 21
+      TabOrder = 5
+    end
+    object Button2: TButton
+      Left = 777
+      Top = 41
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 6
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 858
+      Top = 41
+      Width = 75
+      Height = 25
+      Caption = 'Vizualizar'
+      TabOrder = 7
+      OnClick = Button3Click
     end
   end
   object DBGrid1: TDBGrid [1]
@@ -86,11 +157,56 @@ inherited formFiltroPai1: TformFiltroPai1
       end>
   end
   inherited fdQryFiltro: TFDQuery
-    Active = True
     SQL.Strings = (
       'select * from cliente')
     Left = 656
     Top = 344
+    object fdQryFiltroID_CLIENTE: TIntegerField
+      FieldName = 'ID_CLIENTE'
+      Origin = 'ID_CLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object fdQryFiltroRAZAO_SOCIAL: TWideStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Size = 80
+    end
+    object fdQryFiltroFANTASIA: TWideStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 80
+    end
+    object fdQryFiltroCPF_CNPJ: TWideStringField
+      FieldName = 'CPF_CNPJ'
+      Origin = 'CPF_CNPJ'
+    end
+    object fdQryFiltroTIPO_FJ: TWideStringField
+      FieldName = 'TIPO_FJ'
+      Origin = 'TIPO_FJ'
+      FixedChar = True
+      Size = 1
+    end
+    object fdQryFiltroNOME: TWideStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 80
+    end
+    object fdQryFiltroEMAIL: TWideStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 255
+    end
+    object fdQryFiltroSITE: TWideStringField
+      FieldName = 'SITE'
+      Origin = 'SITE'
+      Size = 255
+    end
+    object fdQryFiltroENDERECO: TWideStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Size = 255
+    end
   end
   inherited dsFiltro: TDataSource
     DataSet = fdQryFiltro

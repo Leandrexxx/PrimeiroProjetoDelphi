@@ -19,6 +19,10 @@ type
     fdQryFiltro: TFDQuery;
     dsFiltro: TDataSource;
     fdTransaction: TFDTransaction;
+    Panel2: TPanel;
+    Button1: TButton;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,5 +35,15 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TformFiltroPai.Button1Click(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+procedure TformFiltroPai.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+end;
 
 end.

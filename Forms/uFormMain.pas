@@ -6,7 +6,7 @@ uses
   Dialogs, AdvToolBar, AdvToolBarStylers, AdvPreviewMenu,
   AdvPreviewMenuStylers, AdvShapeButton, AdvOfficeStatusBar,
   AdvOfficeStatusBarStylers, AdvGlowButton, uFormCadastroCidade,
-  uFormCadastroCliente, uFormCadastroEstado;
+  uFormCadastroCliente, uFormCadastroEstado, uFormFiltroClientes, uFormFiltroPai;
 
 type
   TformMain = class(TAdvToolBarForm)
@@ -26,9 +26,12 @@ type
     AdvGlowButton2: TAdvGlowButton;
     AdvToolBarSeparator2: TAdvToolBarSeparator;
     AdvGlowButton3: TAdvGlowButton;
+    AdvToolBar3: TAdvToolBar;
+    btnFiltroClientes: TAdvGlowButton;
     procedure AdvGlowButton2Click(Sender: TObject);
     procedure AdvGlowButton3Click(Sender: TObject);
     procedure AdvGlowButton1Click(Sender: TObject);
+    procedure btnFiltroClientesClick(Sender: TObject);
   private
     { Private declarations }
   protected
@@ -74,8 +77,18 @@ begin
   Try
     formCadastroCidade.ShowModal;
   Finally
-    FreeAndNil(formCadastroCliente);
+    FreeAndNil(formCadastroCidade);
   End;
+end;
+
+procedure TformMain.btnFiltroClientesClick(Sender: TObject);
+begin
+  try
+    formFiltroClientes := tformFiltroClientes.create(self);
+    formFiltroClientes.Show;
+  finally
+
+  end;
 end;
 
 end.

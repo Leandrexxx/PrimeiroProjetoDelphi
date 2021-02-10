@@ -30,7 +30,7 @@ type
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
-    DBEdit2: TDBEdit;
+    edtRazaoSocial: TDBEdit;
     Label3: TLabel;
     DBEdit3: TDBEdit;
     Label4: TLabel;
@@ -58,6 +58,8 @@ type
     Label13: TLabel;
     Label14: TLabel;
     procedure FormShow(Sender: TObject);
+    procedure fdQryCadastroBeforeInsert(DataSet: TDataSet);
+    procedure fdQryCadastroBeforeEdit(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -71,6 +73,20 @@ implementation
 
 {$R *.dfm}
 
+procedure TformCadastroCliente.fdQryCadastroBeforeEdit(DataSet: TDataSet);
+begin
+  inherited;
+ if self.Visible then
+ edtRazaoSocial.SetFocus;
+end;
+
+procedure TformCadastroCliente.fdQryCadastroBeforeInsert(DataSet: TDataSet);
+begin
+  inherited;
+  if Self.Visible then
+  edtRazaoSocial.SetFocus;
+end;
+
 procedure TformCadastroCliente.FormShow(Sender: TObject);
 begin
   inherited;
@@ -79,6 +95,8 @@ begin
 
   Lookup.fdQryCidades.Open();
   lookup.fdQryCidades.FetchAll;
+
+  edtRazaoSocial.SetFocus;
 end;
 
 end.

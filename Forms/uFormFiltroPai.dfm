@@ -11,6 +11,7 @@ object formFiltroPai: TformFiltroPai
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -41,6 +42,24 @@ object formFiltroPai: TformFiltroPai
       Height = 25
       Caption = 'Filtrar'
       TabOrder = 1
+    end
+    object Panel2: TPanel
+      Left = 592
+      Top = 1
+      Width = 125
+      Height = 103
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 2
+      object Button1: TButton
+        Left = 26
+        Top = 40
+        Width = 75
+        Height = 25
+        Caption = 'Sair'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
     end
   end
   object fdQryFiltro: TFDQuery

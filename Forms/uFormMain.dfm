@@ -9,6 +9,7 @@ object formMain: TformMain
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIForm
   Icon.Data = {
     0000010001001010100000000000280100001600000028000000100000002000
     00000100040000000000C0000000000000000000000000000000000000000000
@@ -351,6 +352,81 @@ object formMain: TformMain
       Width = 673
       Height = 96
       Caption = 'Filtros'
+      object AdvToolBar3: TAdvToolBar
+        Left = 3
+        Top = 3
+        Width = 120
+        Height = 90
+        AllowFloating = True
+        AutoSize = False
+        Caption = 'Principal'
+        CaptionFont.Charset = DEFAULT_CHARSET
+        CaptionFont.Color = clWindowText
+        CaptionFont.Height = -11
+        CaptionFont.Name = 'Tahoma'
+        CaptionFont.Style = []
+        CaptionPosition = cpBottom
+        CaptionAlignment = taCenter
+        CompactImageIndex = -1
+        ShowCaption = True
+        ShowRightHandle = False
+        TextAutoOptionMenu = 'Add or Remove Buttons'
+        TextOptionMenu = 'Options'
+        ToolBarStyler = AdvToolBarOfficeStyler1
+        ParentOptionPicture = True
+        ToolBarIndex = 0
+        object btnFiltroClientes: TAdvGlowButton
+          Left = 2
+          Top = 2
+          Width = 79
+          Height = 55
+          Caption = 'Clientes'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          ParentFont = False
+          Rounded = True
+          TabOrder = 0
+          OnClick = btnFiltroClientesClick
+          Appearance.BorderColor = 13289414
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15987697
+          Appearance.ColorTo = 15921904
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = clSilver
+          Appearance.ColorDisabledTo = clNone
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 16316406
+          Appearance.ColorMirrorTo = 15657703
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = clNone
+          Appearance.ColorMirrorDisabledTo = clNone
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
+      end
     end
     object AdvPage3: TAdvPage
       Left = 4
