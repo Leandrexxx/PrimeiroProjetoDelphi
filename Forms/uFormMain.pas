@@ -6,7 +6,8 @@ uses
   Dialogs, AdvToolBar, AdvToolBarStylers, AdvPreviewMenu,
   AdvPreviewMenuStylers, AdvShapeButton, AdvOfficeStatusBar,
   AdvOfficeStatusBarStylers, AdvGlowButton, uFormCadastroCidade,
-  uFormCadastroCliente, uFormCadastroEstado, uFormFiltroClientes, uFormFiltroPai;
+  uFormCadastroCliente, uFormCadastroEstado, uFormFiltroClientes, uFormFiltroPai,
+  uFormCadastroFornecedor, uFormFiltroFornecedor;
 
 type
   TformMain = class(TAdvToolBarForm)
@@ -23,15 +24,21 @@ type
     AdvToolBar2: TAdvToolBar;
     AdvGlowButton1: TAdvGlowButton;
     AdvToolBarSeparator1: TAdvToolBarSeparator;
-    AdvGlowButton2: TAdvGlowButton;
     AdvToolBarSeparator2: TAdvToolBarSeparator;
     AdvGlowButton3: TAdvGlowButton;
     AdvToolBar3: TAdvToolBar;
     btnFiltroClientes: TAdvGlowButton;
+    AdvGlowButton4: TAdvGlowButton;
+    AdvGlowButton2: TAdvGlowButton;
+    AdvToolBarSeparator3: TAdvToolBarSeparator;
+    btnCadastroFornecedor: TAdvGlowButton;
+    btnFornecedor: TAdvGlowButton;
     procedure AdvGlowButton2Click(Sender: TObject);
     procedure AdvGlowButton3Click(Sender: TObject);
     procedure AdvGlowButton1Click(Sender: TObject);
     procedure btnFiltroClientesClick(Sender: TObject);
+    procedure btnCadastroFornecedorClick(Sender: TObject);
+    procedure btnFornecedorClick(Sender: TObject);
   private
     { Private declarations }
   protected
@@ -81,11 +88,32 @@ begin
   End;
 end;
 
+procedure TformMain.btnCadastroFornecedorClick(Sender: TObject);
+begin
+formCadastroFornecedor := TformCadastroFornecedor.Create(Self);
+
+  Try
+    formCadastroFornecedor.ShowModal;
+  Finally
+    FreeAndNil(formCadastroFornecedor);
+  End;
+end;
+
 procedure TformMain.btnFiltroClientesClick(Sender: TObject);
 begin
   try
     formFiltroClientes := tformFiltroClientes.create(self);
     formFiltroClientes.Show;
+  finally
+
+  end;
+end;
+
+procedure TformMain.btnFornecedorClick(Sender: TObject);
+begin
+  try
+    formFiltroFornecedores := tformFiltroFornecedores.create(self);
+    formFiltroFornecedores.Show;
   finally
 
   end;

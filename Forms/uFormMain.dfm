@@ -31,7 +31,7 @@ object formMain: TformMain
     Top = 0
     Width = 681
     Height = 153
-    ActivePage = AdvPage1
+    ActivePage = AdvPage2
     Caption.Caption = 'Sistema de Gest'#227'o'
     CaptionButtons = [cbClose, cbMinimize, cbMaximize]
     Hints.MDICloseBtnHint = 'Close'
@@ -218,12 +218,12 @@ object formMain: TformMain
           Appearance.GradientMirrorDown = ggVertical
           Appearance.GradientChecked = ggVertical
         end
-        object AdvGlowButton2: TAdvGlowButton
-          Left = 2
+        object AdvGlowButton3: TAdvGlowButton
+          Left = 91
           Top = 2
           Width = 79
           Height = 55
-          Caption = 'Clientes'
+          Caption = 'Cidades'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clMaroon
           Font.Height = -11
@@ -238,7 +238,7 @@ object formMain: TformMain
           ParentFont = False
           Rounded = True
           TabOrder = 1
-          OnClick = AdvGlowButton2Click
+          OnClick = AdvGlowButton3Click
           Appearance.BorderColor = 13289414
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -269,12 +269,12 @@ object formMain: TformMain
           Appearance.GradientMirrorDown = ggVertical
           Appearance.GradientChecked = ggVertical
         end
-        object AdvGlowButton3: TAdvGlowButton
-          Left = 91
+        object AdvGlowButton4: TAdvGlowButton
+          Left = 2
           Top = 2
           Width = 79
           Height = 55
-          Caption = 'Cidades'
+          Caption = 'Clientes'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clMaroon
           Font.Height = -11
@@ -289,7 +289,7 @@ object formMain: TformMain
           ParentFont = False
           Rounded = True
           TabOrder = 2
-          OnClick = AdvGlowButton3Click
+          OnClick = AdvGlowButton2Click
           Appearance.BorderColor = 13289414
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219
@@ -324,11 +324,11 @@ object formMain: TformMain
       object AdvToolBar2: TAdvToolBar
         Left = 276
         Top = 3
-        Width = 120
+        Width = 197
         Height = 90
         AllowFloating = True
         AutoSize = False
-        Caption = 'Untitled'
+        Caption = 'Estoque'
         CaptionFont.Charset = DEFAULT_CHARSET
         CaptionFont.Color = clWindowText
         CaptionFont.Height = -11
@@ -344,6 +344,101 @@ object formMain: TformMain
         ToolBarStyler = AdvToolBarOfficeStyler1
         ParentOptionPicture = True
         ToolBarIndex = 1
+        object AdvToolBarSeparator3: TAdvToolBarSeparator
+          Left = 73
+          Top = 2
+          Width = 10
+          Height = 55
+          LineColor = clBtnShadow
+        end
+        object AdvGlowButton2: TAdvGlowButton
+          Left = 83
+          Top = 2
+          Width = 71
+          Height = 55
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          Rounded = True
+          TabOrder = 0
+          Appearance.BorderColor = 13289414
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15987697
+          Appearance.ColorTo = 15921904
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = clSilver
+          Appearance.ColorDisabledTo = clNone
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 16316406
+          Appearance.ColorMirrorTo = 15657703
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = clNone
+          Appearance.ColorMirrorDisabledTo = clNone
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
+        object btnCadastroFornecedor: TAdvGlowButton
+          Left = 2
+          Top = 2
+          Width = 71
+          Height = 55
+          Caption = 'Fornecedor'
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          Rounded = True
+          TabOrder = 1
+          OnClick = btnCadastroFornecedorClick
+          Appearance.BorderColor = 13289414
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15987697
+          Appearance.ColorTo = 15921904
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = clSilver
+          Appearance.ColorDisabledTo = clNone
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 16316406
+          Appearance.ColorMirrorTo = 15657703
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = clNone
+          Appearance.ColorMirrorDisabledTo = clNone
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
       end
     end
     object AdvPage2: TAdvPage
@@ -355,7 +450,7 @@ object formMain: TformMain
       object AdvToolBar3: TAdvToolBar
         Left = 3
         Top = 3
-        Width = 120
+        Width = 267
         Height = 90
         AllowFloating = True
         AutoSize = False
@@ -396,6 +491,57 @@ object formMain: TformMain
           Rounded = True
           TabOrder = 0
           OnClick = btnFiltroClientesClick
+          Appearance.BorderColor = 13289414
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15987697
+          Appearance.ColorTo = 15921904
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = clSilver
+          Appearance.ColorDisabledTo = clNone
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 16316406
+          Appearance.ColorMirrorTo = 15657703
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = clNone
+          Appearance.ColorMirrorDisabledTo = clNone
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
+        object btnFornecedor: TAdvGlowButton
+          Left = 81
+          Top = 2
+          Width = 79
+          Height = 55
+          Caption = 'Fornecedor'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          ParentFont = False
+          Rounded = True
+          TabOrder = 1
+          OnClick = btnFornecedorClick
           Appearance.BorderColor = 13289414
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219

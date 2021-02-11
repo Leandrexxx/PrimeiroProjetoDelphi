@@ -12,7 +12,9 @@ uses
   uLookup in 'Shared\uLookup.pas' {Lookup: TDataModule},
   uFormMain in 'Forms\uFormMain.pas' {formMain},
   uFormFiltroPai in 'Forms\uFormFiltroPai.pas' {formFiltroPai},
-  uFormFiltroClientes in 'Forms\uFormFiltroClientes.pas' {formFiltroClientes};
+  uFormFiltroClientes in 'Forms\uFormFiltroClientes.pas' {formFiltroClientes},
+  uFormCadastroFornecedor in 'Forms\uFormCadastroFornecedor.pas' {formCadastroFornecedor},
+  uFormFiltroFornecedor in 'Forms\uFormFiltroFornecedor.pas' {formFiltroFornecedores};
 
 {$R *.res}
 

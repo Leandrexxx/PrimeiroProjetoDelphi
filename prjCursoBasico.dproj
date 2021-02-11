@@ -88,6 +88,7 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Icon_MainIcon>iconfinder_new-folder-system_111217.ico</Icon_MainIcon>
+        <UsePackages>true</UsePackages>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -144,6 +145,14 @@
         </DCCReference>
         <DCCReference Include="Forms\uFormFiltroClientes.pas">
             <Form>formFiltroClientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Forms\uFormCadastroFornecedor.pas">
+            <Form>formCadastroFornecedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Forms\uFormFiltroFornecedor.pas">
+            <Form>formFiltroFornecedores</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
