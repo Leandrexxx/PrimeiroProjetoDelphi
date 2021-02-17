@@ -7,7 +7,7 @@ uses
   AdvPreviewMenuStylers, AdvShapeButton, AdvOfficeStatusBar,
   AdvOfficeStatusBarStylers, AdvGlowButton, uFormCadastroCidade,
   uFormCadastroCliente, uFormCadastroEstado, uFormFiltroClientes, uFormFiltroPai,
-  uFormCadastroFornecedor, uFormFiltroFornecedor;
+  uFormCadastroFornecedor, uFormFiltroFornecedor, uFormFiltroProdutos;
 
 type
   TformMain = class(TAdvToolBarForm)
@@ -33,12 +33,14 @@ type
     AdvToolBarSeparator3: TAdvToolBarSeparator;
     btnCadastroFornecedor: TAdvGlowButton;
     btnFornecedor: TAdvGlowButton;
+    btnProdutos: TAdvGlowButton;
     procedure AdvGlowButton2Click(Sender: TObject);
     procedure AdvGlowButton3Click(Sender: TObject);
     procedure AdvGlowButton1Click(Sender: TObject);
     procedure btnFiltroClientesClick(Sender: TObject);
     procedure btnCadastroFornecedorClick(Sender: TObject);
     procedure btnFornecedorClick(Sender: TObject);
+    procedure btnProdutosClick(Sender: TObject);
   private
     { Private declarations }
   protected
@@ -114,6 +116,16 @@ begin
   try
     formFiltroFornecedores := tformFiltroFornecedores.create(self);
     formFiltroFornecedores.Show;
+  finally
+
+  end;
+end;
+
+procedure TformMain.btnProdutosClick(Sender: TObject);
+begin
+  try
+    formFiltroProdutos := tformFiltroProdutos.create(self);
+    formFiltroProdutos.Show;
   finally
 
   end;

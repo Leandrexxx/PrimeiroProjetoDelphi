@@ -10,6 +10,7 @@ inherited formFiltroFornecedores: TformFiltroFornecedores
   inherited Panel1: TPanel
     Width = 1031
     Height = 137
+    ExplicitWidth = 1031
     ExplicitHeight = 137
     inherited Label1: TLabel
       Width = 60
@@ -34,6 +35,8 @@ inherited formFiltroFornecedores: TformFiltroFornecedores
     inherited Panel2: TPanel
       Left = 905
       Height = 135
+      ExplicitLeft = 905
+      ExplicitHeight = 135
     end
     object edtCnpj: TEdit
       Left = 296
@@ -49,6 +52,7 @@ inherited formFiltroFornecedores: TformFiltroFornecedores
     Width = 1031
     Height = 386
     Align = alClient
+    DataSource = dsFiltro
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -60,7 +64,7 @@ inherited formFiltroFornecedores: TformFiltroFornecedores
     SQL.Strings = (
       'select * from fornecedores')
     Left = 632
-    Top = 240
+    Top = 184
     object fdQryFiltroID_FORNECEDOR: TIntegerField
       FieldName = 'ID_FORNECEDOR'
       Origin = 'ID_FORNECEDOR'
@@ -106,16 +110,12 @@ inherited formFiltroFornecedores: TformFiltroFornecedores
     end
   end
   inherited dsFiltro: TDataSource
-    Left = 632
-    Top = 288
+    DataSet = fdQryFiltro
+    Left = 648
+    Top = 248
   end
   inherited fdTransaction: TFDTransaction
-    Left = 632
-    Top = 336
-  end
-  object DataSource1: TDataSource
-    DataSet = fdQryFiltro
-    Left = 632
-    Top = 384
+    Left = 712
+    Top = 288
   end
 end

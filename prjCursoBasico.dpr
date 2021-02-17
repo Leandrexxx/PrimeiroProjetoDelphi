@@ -14,7 +14,8 @@ uses
   uFormFiltroPai in 'Forms\uFormFiltroPai.pas' {formFiltroPai},
   uFormFiltroClientes in 'Forms\uFormFiltroClientes.pas' {formFiltroClientes},
   uFormCadastroFornecedor in 'Forms\uFormCadastroFornecedor.pas' {formCadastroFornecedor},
-  uFormFiltroFornecedor in 'Forms\uFormFiltroFornecedor.pas' {formFiltroFornecedores};
+  uFormFiltroFornecedor in 'Forms\uFormFiltroFornecedor.pas' {formFiltroFornecedores},
+  uFormFiltroProdutos in 'Forms\uFormFiltroProdutos.pas' {formFiltroProdutos};
 
 {$R *.res}
 

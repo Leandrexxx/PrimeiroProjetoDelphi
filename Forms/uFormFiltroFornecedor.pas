@@ -21,7 +21,6 @@ type
     fdQryFiltroID_CIDADE: TIntegerField;
     fdQryFiltroID_ESTADO: TIntegerField;
     fdQryFiltroEMAIL: TWideStringField;
-    DataSource1: TDataSource;
     DBGrid1: TDBGrid;
     edtCnpj: TEdit;
     Label2: TLabel;
