@@ -9,6 +9,7 @@ inherited formFiltroClientes: TformFiltroClientes
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 1031
+    ExplicitLeft = 8
     ExplicitWidth = 1031
     inherited Label1: TLabel
       Width = 78

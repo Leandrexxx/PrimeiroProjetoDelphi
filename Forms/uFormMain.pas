@@ -7,7 +7,8 @@ uses
   AdvPreviewMenuStylers, AdvShapeButton, AdvOfficeStatusBar,
   AdvOfficeStatusBarStylers, AdvGlowButton, uFormCadastroCidade,
   uFormCadastroCliente, uFormCadastroEstado, uFormFiltroClientes, uFormFiltroPai,
-  uFormCadastroFornecedor, uFormFiltroFornecedor, uFormFiltroProdutos;
+  uFormCadastroFornecedor, uFormFiltroFornecedor, uFormFiltroProdutos,
+  uFormCadastroProduto;
 
 type
   TformMain = class(TAdvToolBarForm)
@@ -29,7 +30,7 @@ type
     AdvToolBar3: TAdvToolBar;
     btnFiltroClientes: TAdvGlowButton;
     AdvGlowButton4: TAdvGlowButton;
-    AdvGlowButton2: TAdvGlowButton;
+    btnCadastroProduto: TAdvGlowButton;
     AdvToolBarSeparator3: TAdvToolBarSeparator;
     btnCadastroFornecedor: TAdvGlowButton;
     btnFornecedor: TAdvGlowButton;
@@ -41,6 +42,7 @@ type
     procedure btnCadastroFornecedorClick(Sender: TObject);
     procedure btnFornecedorClick(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
+    procedure btnCadastroProdutoClick(Sender: TObject);
   private
     { Private declarations }
   protected
@@ -98,6 +100,16 @@ formCadastroFornecedor := TformCadastroFornecedor.Create(Self);
     formCadastroFornecedor.ShowModal;
   Finally
     FreeAndNil(formCadastroFornecedor);
+  End;
+end;
+
+procedure TformMain.btnCadastroProdutoClick(Sender: TObject);
+begin
+  FormCadastroProduto := TFormCadastroProduto.Create(Self);
+   Try
+    formCadastroProduto.ShowModal;
+  Finally
+    FreeAndNil(formCadastroProduto);
   End;
 end;
 

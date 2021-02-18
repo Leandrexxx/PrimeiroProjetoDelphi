@@ -30,6 +30,7 @@ inherited formFiltroFornecedores: TformFiltroFornecedores
     end
     inherited btnFiltro: TButton
       Left = 496
+      OnClick = btnFiltroClick
       ExplicitLeft = 496
     end
     inherited Panel2: TPanel
@@ -44,6 +45,24 @@ inherited formFiltroFornecedores: TformFiltroFornecedores
       Width = 177
       Height = 21
       TabOrder = 3
+    end
+    object Button2: TButton
+      Left = 585
+      Top = 41
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 4
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 674
+      Top = 41
+      Width = 75
+      Height = 25
+      Caption = 'Vizualizar'
+      TabOrder = 5
+      OnClick = Button3Click
     end
   end
   object DBGrid1: TDBGrid [1]

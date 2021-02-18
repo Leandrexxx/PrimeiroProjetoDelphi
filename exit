@@ -1,0 +1,29 @@
+[33mcommit 04e16cb57c113712948346591619f3c46b9420dd[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Leandro <leandrexpsn@gmail.com>
+Date:   Wed Feb 17 01:04:11 2021 -0300
+
+    Inserindo Filtro Produtos
+
+[33mcommit 3919ec13d541a96c016d0cb7926dfa15e10d5540[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Leandro <leandrexpsn@gmail.com>
+Date:   Wed Feb 10 23:29:43 2021 -0300
+
+     Criação da Tela Cadastro de Fornecedores e de Filtro
+
+[33mcommit 2d18c0aad197a4a2b99327a6d0098c837d4461ff[m
+Author: Leandro <leandrexpsn@gmail.com>
+Date:   Tue Feb 9 23:27:41 2021 -0300
+
+    Finalizando o filtro
+
+[33mcommit 01ce4e93342e112d4f82d5d68ef70c57fcebbd31[m
+Author: Leandro <leandrexpsn@gmail.com>
+Date:   Tue Feb 9 01:31:59 2021 -0300
+
+    Criação tela filtro Clientes
+
+[33mcommit ceef3fae967c49db69d069130007fbd18261c1cd[m
+Author: Leandro <leandrexpsn@gmail.com>
+Date:   Fri Feb 5 00:48:10 2021 -0300
+
+     Projeto Inciado, fazendo cadastro de Clientes, Cidades e Estado

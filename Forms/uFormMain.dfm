@@ -351,11 +351,12 @@ object formMain: TformMain
           Height = 55
           LineColor = clBtnShadow
         end
-        object AdvGlowButton2: TAdvGlowButton
+        object btnCadastroProduto: TAdvGlowButton
           Left = 83
           Top = 2
           Width = 71
           Height = 55
+          Caption = 'Produtos'
           FocusType = ftHot
           NotesFont.Charset = DEFAULT_CHARSET
           NotesFont.Color = clWindowText
@@ -364,6 +365,7 @@ object formMain: TformMain
           NotesFont.Style = []
           Rounded = True
           TabOrder = 0
+          OnClick = btnCadastroProdutoClick
           Appearance.BorderColor = 13289414
           Appearance.BorderColorHot = 10079963
           Appearance.BorderColorDown = 4548219

@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, Vcl.Grids, Vcl.DBGrids, FireDAC.Comp.Client, FireDAC.Comp.DataSet,
-  Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.StdCtrls, Vcl.ExtCtrls, uFormCadastroProduto;
 
 type
   TformFiltroProdutos = class(TformFiltroPai)
@@ -26,7 +26,11 @@ type
     fdQryFiltroFABRICANTE: TWideStringField;
     fdQryFiltroMARCA_MODELO: TWideStringField;
     fdQryFiltroFORNECEDOR: TWideStringField;
+    Button2: TButton;
+    Button3: TButton;
     procedure btnFiltroClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
     procedure Filtrar;
@@ -45,6 +49,31 @@ procedure TformFiltroProdutos.btnFiltroClick(Sender: TObject);
 begin
   inherited;
   Filtrar;
+end;
+
+procedure TformFiltroProdutos.Button2Click(Sender: TObject);
+begin
+  inherited;
+  formCadastroProduto := TformCadastroProduto.Create(Self);
+  Try
+    formCadastroProduto.fdQryCadastro.Insert;
+    formCadastroProduto.ShowModal;
+  Finally
+    FreeAndNil(formCadastroProduto);
+  End;
+end;
+
+procedure TformFiltroProdutos.Button3Click(Sender: TObject);
+begin
+  inherited;
+
+  formCadastroProduto := TformCadastroProduto .Create(Self);
+  Try
+    formCadastroProduto .fdQryCadastro.Locate('ID_PRODUTO', fdQryFiltro.FieldByName('ID_PRODUTO').AsInteger,[]);
+    formCadastroProduto .ShowModal;
+  Finally
+    FreeAndNil(formCadastroProduto );
+  End;
 end;
 
 procedure TformFiltroProdutos.Filtrar;
