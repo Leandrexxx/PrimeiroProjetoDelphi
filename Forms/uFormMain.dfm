@@ -31,7 +31,7 @@ object formMain: TformMain
     Top = 0
     Width = 681
     Height = 153
-    ActivePage = AdvPage2
+    ActivePage = AdvPage1
     Caption.Caption = 'Sistema de Gest'#227'o'
     CaptionButtons = [cbClose, cbMinimize, cbMaximize]
     Hints.MDICloseBtnHint = 'Close'

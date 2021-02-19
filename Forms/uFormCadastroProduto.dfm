@@ -1,7 +1,7 @@
 inherited formCadastroProduto: TformCadastroProduto
   Caption = 'Cadastro de Produto'
-  ClientHeight = 239
-  ExplicitHeight = 268
+  ClientHeight = 244
+  ExplicitHeight = 273
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
@@ -61,7 +61,7 @@ inherited formCadastroProduto: TformCadastroProduto
     Caption = 'FABRICANTE'
   end
   object Label8: TLabel [8]
-    Left = 272
+    Left = 224
     Top = 171
     Width = 82
     Height = 13
@@ -74,12 +74,17 @@ inherited formCadastroProduto: TformCadastroProduto
     Height = 13
     Caption = 'CODIGO'
   end
+  object Label10: TLabel [10]
+    Left = 491
+    Top = 171
+    Width = 113
+    Height = 13
+    Caption = 'CODIGO FORNECEDOR'
+  end
   inherited pnCabecalho: TPanel
     TabOrder = 10
-    ExplicitLeft = 26
-    ExplicitTop = 47
   end
-  object dbDescricao: TDBEdit [11]
+  object dbDescricao: TDBEdit [12]
     Left = 135
     Top = 88
     Width = 289
@@ -88,7 +93,7 @@ inherited formCadastroProduto: TformCadastroProduto
     DataSource = dsCadastro
     TabOrder = 1
   end
-  object DBEdit2: TDBEdit [12]
+  object DBEdit2: TDBEdit [13]
     Left = 252
     Top = 144
     Width = 73
@@ -98,18 +103,18 @@ inherited formCadastroProduto: TformCadastroProduto
     DataSource = dsCadastro
     TabOrder = 5
   end
-  object DBEdit5: TDBEdit [13]
+  object DBEdit5: TDBEdit [14]
     Left = 24
     Top = 190
-    Width = 233
+    Width = 175
     Height = 21
     CharCase = ecUpperCase
     DataField = 'FABRICANTE'
     DataSource = dsCadastro
     TabOrder = 8
   end
-  object DBEdit6: TDBEdit [14]
-    Left = 272
+  object DBEdit6: TDBEdit [15]
+    Left = 224
     Top = 190
     Width = 249
     Height = 21
@@ -118,11 +123,30 @@ inherited formCadastroProduto: TformCadastroProduto
     DataSource = dsCadastro
     TabOrder = 9
   end
-  object dbmQtd: TDBMoneyEdit [15]
+  object dbmQtd: TDBAdvMoneyEdit [16]
     Left = 432
     Top = 88
     Width = 56
     Height = 21
+    EditType = etFloat
+    EmptyTextStyle = []
+    Precision = 2
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 2
+    Text = '0,00'
+    Visible = True
+    Version = '1.1.3.0'
     CalculatorLook.ButtonWidth = 24
     CalculatorLook.ButtonHeight = 24
     CalculatorLook.ButtonColor = clSilver
@@ -133,16 +157,33 @@ inherited formCadastroProduto: TformCadastroProduto
     CalculatorLook.Font.Height = -11
     CalculatorLook.Font.Name = 'Tahoma'
     CalculatorLook.Font.Style = []
-    TabOrder = 2
-    Version = '1.1.2.0'
     DataField = 'QTD'
     DataSource = dsCadastro
   end
-  object dbPesoLiquido: TDBMoneyEdit [16]
+  object dbPesoLiquido: TDBAdvMoneyEdit [17]
     Left = 352
     Top = 144
     Width = 105
     Height = 21
+    EditType = etFloat
+    EmptyTextStyle = []
+    Precision = 2
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 6
+    Text = '0,00'
+    Visible = True
+    Version = '1.1.3.0'
     CalculatorLook.ButtonWidth = 24
     CalculatorLook.ButtonHeight = 24
     CalculatorLook.ButtonColor = clSilver
@@ -153,16 +194,33 @@ inherited formCadastroProduto: TformCadastroProduto
     CalculatorLook.Font.Height = -11
     CalculatorLook.Font.Name = 'Tahoma'
     CalculatorLook.Font.Style = []
-    TabOrder = 6
-    Version = '1.1.2.0'
     DataField = 'PESO_LIQUIDO'
     DataSource = dsCadastro
   end
-  object DBMoneyEdit3: TDBMoneyEdit [17]
+  object DBMoneyEdit3: TDBAdvMoneyEdit [18]
     Left = 491
     Top = 144
     Width = 105
     Height = 21
+    EditType = etFloat
+    EmptyTextStyle = []
+    Precision = 2
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 7
+    Text = '0,00'
+    Visible = True
+    Version = '1.1.3.0'
     CalculatorLook.ButtonWidth = 24
     CalculatorLook.ButtonHeight = 24
     CalculatorLook.ButtonColor = clSilver
@@ -173,16 +231,33 @@ inherited formCadastroProduto: TformCadastroProduto
     CalculatorLook.Font.Height = -11
     CalculatorLook.Font.Name = 'Tahoma'
     CalculatorLook.Font.Style = []
-    TabOrder = 7
-    Version = '1.1.2.0'
     DataField = 'PESO_BRUTO'
     DataSource = dsCadastro
   end
-  object DBMoneyEdit1: TDBMoneyEdit [18]
+  object DBMoneyEdit1: TDBAdvMoneyEdit [19]
     Left = 23
     Top = 144
     Width = 90
     Height = 21
+    EditType = etFloat
+    EmptyTextStyle = []
+    Precision = 2
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 3
+    Text = '0,00'
+    Visible = True
+    Version = '1.1.3.0'
     CalculatorLook.ButtonWidth = 24
     CalculatorLook.ButtonHeight = 24
     CalculatorLook.ButtonColor = clSilver
@@ -193,16 +268,33 @@ inherited formCadastroProduto: TformCadastroProduto
     CalculatorLook.Font.Height = -11
     CalculatorLook.Font.Name = 'Tahoma'
     CalculatorLook.Font.Style = []
-    TabOrder = 3
-    Version = '1.1.2.0'
     DataField = 'CUSTO'
     DataSource = dsCadastro
   end
-  object DBMoneyEdit2: TDBMoneyEdit [19]
+  object DBMoneyEdit2: TDBAdvMoneyEdit [20]
     Left = 135
     Top = 144
     Width = 90
     Height = 21
+    EditType = etFloat
+    EmptyTextStyle = []
+    Precision = 2
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 4
+    Text = '0,00'
+    Visible = True
+    Version = '1.1.3.0'
     CalculatorLook.ButtonWidth = 24
     CalculatorLook.ButtonHeight = 24
     CalculatorLook.ButtonColor = clSilver
@@ -213,12 +305,10 @@ inherited formCadastroProduto: TformCadastroProduto
     CalculatorLook.Font.Height = -11
     CalculatorLook.Font.Name = 'Tahoma'
     CalculatorLook.Font.Style = []
-    TabOrder = 4
-    Version = '1.1.2.0'
     DataField = 'V_UNITARIO'
     DataSource = dsCadastro
   end
-  object edtCodigo: TDBEdit [20]
+  object edtCodigo: TDBEdit [21]
     Left = 23
     Top = 88
     Width = 98
@@ -227,6 +317,18 @@ inherited formCadastroProduto: TformCadastroProduto
     DataSource = dsCadastro
     Enabled = False
     TabOrder = 0
+  end
+  object DBLookupComboBox1: TDBLookupComboBox [22]
+    Left = 491
+    Top = 190
+    Width = 190
+    Height = 21
+    DataField = 'ID_FORNECEDOR'
+    DataSource = dsCadastro
+    KeyField = 'ID_FORNECEDOR'
+    ListField = 'RAZAO_SOCIAL'
+    ListSource = Lookup.dsFornecedor
+    TabOrder = 11
   end
   inherited fdQryCadastro: TFDQuery
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
@@ -293,8 +395,8 @@ inherited formCadastroProduto: TformCadastroProduto
     Top = 104
   end
   inherited fdTransaction: TFDTransaction
-    Left = 624
-    Top = 168
+    Left = 576
+    Top = 56
   end
   inherited dsCadastro: TDataSource
     Left = 576

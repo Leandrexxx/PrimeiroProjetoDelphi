@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Vcl.StdCtrls, Vcl.Buttons,
-   Vcl.Mask, Vcl.DBCtrls, Vcl.ExtCtrls, MoneyEdit, dbmnyed;
+   Vcl.Mask, Vcl.DBCtrls, Vcl.ExtCtrls, MoneyEdit, dbmnyed, uLookup, AdvEdit,
+  AdvMoneyEdit, DBAdvMoneyEdit, uBiblioteca;
 type
   TformCadastroProduto = class(TformCadastroPai)
     fdQryCadastroID_PRODUTO: TIntegerField;
@@ -35,13 +36,16 @@ type
     Label7: TLabel;
     DBEdit6: TDBEdit;
     Label8: TLabel;
-    dbmQtd: TDBMoneyEdit;
-    dbPesoLiquido: TDBMoneyEdit;
-    DBMoneyEdit3: TDBMoneyEdit;
-    DBMoneyEdit1: TDBMoneyEdit;
-    DBMoneyEdit2: TDBMoneyEdit;
+    dbmQtd: TDBAdvMoneyEdit;
+    dbPesoLiquido: TDBAdvMoneyEdit;
+    DBMoneyEdit3: TDBAdvMoneyEdit;
+    DBMoneyEdit1: TDBAdvMoneyEdit;
+    DBMoneyEdit2: TDBAdvMoneyEdit;
     edtCodigo: TDBEdit;
     Label9: TLabel;
+    Label10: TLabel;
+    DBLookupComboBox1: TDBLookupComboBox;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,5 +58,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TformCadastroProduto.FormCreate(Sender: TObject);
+begin
+  inherited;
+  atualizaFDQuery(Lookup.fdQryFornecedor);
+
+end;
 
 end.

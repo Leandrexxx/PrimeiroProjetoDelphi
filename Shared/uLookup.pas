@@ -15,6 +15,14 @@ type
     fdTransaction: TFDTransaction;
     fdQryCidades: TFDQuery;
     dsCidades: TDataSource;
+    fdQryFornecedor: TFDQuery;
+    dsFornecedor: TDataSource;
+    fdQryClientes: TFDQuery;
+    dsClientes: TDataSource;
+    fdQryProdutos: TFDQuery;
+    dsProdutos: TDataSource;
+    fdQryProdutosID_PRODUTO: TIntegerField;
+    fdQryProdutosDESCRICAO: TWideStringField;
   private
     { Private declarations }
   public

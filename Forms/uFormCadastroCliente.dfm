@@ -166,8 +166,8 @@ inherited formCadastroCliente: TformCadastroCliente
     DataField = 'TIPO_FJ'
     DataSource = dsCadastro
     Items.Strings = (
-      'Fisica'
-      'Jur'#237'dica')
+      'F'
+      'J')
     TabOrder = 5
   end
   object DBEdit5: TDBEdit [20]

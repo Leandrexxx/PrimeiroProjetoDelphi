@@ -16,7 +16,8 @@ uses
   uFormCadastroFornecedor in 'Forms\uFormCadastroFornecedor.pas' {formCadastroFornecedor},
   uFormFiltroFornecedor in 'Forms\uFormFiltroFornecedor.pas' {formFiltroFornecedores},
   uFormFiltroProdutos in 'Forms\uFormFiltroProdutos.pas' {formFiltroProdutos},
-  uFormCadastroProduto in 'Forms\uFormCadastroProduto.pas' {formCadastroProduto};
+  uFormCadastroProduto in 'Forms\uFormCadastroProduto.pas' {formCadastroProduto},
+  uFormCadastroVenda in 'Forms\uFormCadastroVenda.pas' {formCadastroVenda};
 
 {$R *.res}
 
@@ -27,6 +28,5 @@ begin
   Application.CreateForm(TformConfigBanco, formConfigBanco);
   Application.CreateForm(TdmDados, dmDados);
   Application.CreateForm(TLookup, Lookup);
-  Application.CreateForm(TformCadastroProduto, formCadastroProduto);
   Application.Run;
 end.
