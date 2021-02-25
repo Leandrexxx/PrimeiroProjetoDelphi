@@ -62,7 +62,7 @@ implementation
 procedure TformCadastroProduto.FormCreate(Sender: TObject);
 begin
   inherited;
-  atualizaFDQuery(Lookup.fdQryFornecedor);
+  atualizaFDQuery(Lookup.fdQryFornecedor, '');
 
 end;
 
